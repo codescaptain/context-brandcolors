@@ -8,7 +8,7 @@ const Download = () => {
   const [downloadUrl, setDownloadUrl] = useState()
   const [cssMethod, setCssMethod] = useState('css')
   const getLink = () => {
-    prompt('Here is the url share!', `http://localhost:3000/collection/${selectedBrands.join(',')}`)
+    prompt('Here is the url share!', `https://context-clone-brandcolors.netlify.app/collection/${selectedBrands.join(',')}`)
   }
   useEffect(() => {
     if(selectedBrands.length > 0) {
