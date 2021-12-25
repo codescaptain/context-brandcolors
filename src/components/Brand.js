@@ -3,7 +3,7 @@ import {getContrastYIQ} from '../helper'
 import MainContext from '../context/MainContext'
 import Clipboard from 'react-clipboard.js';
 
-const Brand = ({brand}) => {
+const Brand = ({brand, style}) => {
 
   const {addBrands, selectedBrands, removeBrands, setCopied} = useContext(MainContext)
 
@@ -18,7 +18,7 @@ const Brand = ({brand}) => {
     setCopied(color)
   }
   return (
-    <div className={`brand ${selectedBrands.includes(brand.slug) ? 'selected' : ''}`}>
+    <div style={style} className={`brand ${selectedBrands.includes(brand.slug) ? 'selected' : ''}`}>
       <h5 onClick={toggleSelected}>{brand.title}</h5>
       <div className="brand-colors">
         {brand.colors.map((color, key) => (
